@@ -43,7 +43,7 @@ czk = gd('czk');
 // USD to PESO Currency Converter
 function convert(){
     const dollarInput = document.getElementById('dollarInput').value;
-    fetch('http://data.fixer.io/api/latest?access_key=6b3feb8224dcfc1839a21dd630c1b534&%20base=USD&symbols=PHP')
+    fetch('https://data.fixer.io/api/latest?access_key=6b3feb8224dcfc1839a21dd630c1b534&%20base=USD&symbols=PHP')
     .then(response => response.text())
     .then(data => {
         const fixerInput = 'Fixer.io @ Levi Web Design&Development';
@@ -59,7 +59,7 @@ function convert(){
 function countryConvert() {
     const countryInput = document.getElementById('countryCode').value;
     
-    fetch('http://data.fixer.io/api/latest?access_key=6b3feb8224dcfc1839a21dd630c1b534&%20base=' + countryInput + '&symbols=USD,AUD,GBP,SGD,ILS,JPY,RON,TRY,HRK,MXN,NOK,IDR,HKD,ZAR,ISK,CAD,KRW,THB,PHP,MYR,NZD,PLN,SEK,RUB,CNY,INR,CHF,BGN,CZK')
+    fetch('https://data.fixer.io/api/latest?access_key=6b3feb8224dcfc1839a21dd630c1b534&%20base=' + countryInput + '&symbols=USD,AUD,GBP,SGD,ILS,JPY,RON,TRY,HRK,MXN,NOK,IDR,HKD,ZAR,ISK,CAD,KRW,THB,PHP,MYR,NZD,PLN,SEK,RUB,CNY,INR,CHF,BGN,CZK')
     .then(response => response.text())
     .then(data => {
         const rates = JSON.parse(data);
