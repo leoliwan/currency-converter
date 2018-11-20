@@ -1,0 +1,53 @@
+body {
+    background-image: linear-gradient(to right top, #00b09b, #24b98b, #4bc075, #70c65b, #96c93d);
+}
+
+#result {
+    display: none;
+}
+
+.country {
+    background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-size: 20px;
+color: #fff;
+font-weight: 300;
+}
+
+.form-group option {
+    background: #000046 !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff !important;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.alert:hover {
+    background-color: #00ED65!important;
+}
+
+.usd-peso {
+    background-color: #103582;
+    border: #FCB813 1px solid;
+}
+
+.usd-peso h3 {
+    font-weight: 300;
+    color: #fff;
+}
+.usd-peso select {
+    background-color: #002272;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.convert button {
+    background-image: linear-gradient(to right top, #00b09b, #24b98b, #4bc075, #70c65b, #96c93d)!important;
+    border-radius: 50px;
+}
+
+#fixerioapisource {
+    font-weight: 100!important;
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="converterApp" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="card bg-transparent" style="border:0">
+                    <!-- Dollar to Peso Converter-->
+                    <div class="card card-body usd-peso mb-5">
+                        <h3 class="text-center">Convert USD to PHP</h3>
+                        <p class="text-center text-white mb-4">Select Amount and Click Convert.</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select class="form-control" id="dollarInput" style="height:45px">
+                                        <option value=""></span> Select Amount</option>
+                                        <option value="100">100 <span>USD</span></option>
+                                        <option value="1000">1,000 <span>USD</span></option>
+                                        <option value="10000">10,000 <span>USD</span></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 convert mb-3">
+                                <button class="btn btn-block btn-lg text-white" id="convertustophp">Convert Now</button>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="alert mb-0" style="background-color:#002272; border-radius: 30px">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-ph"></span><strong> PHP</strong><span class="float-right text-white" id="convertedPHP" style="font-size:18px; font-weight:300">&#8369;00.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End of Dollar to Peso Converter-->
+
+                    <p class="text-white"><strong>Enter the name of your country and the currency converter will automatically convert to different world currency. Use this online currency converter</strong></p>
+                    <form>
+                        <div class="form-group">
+                            <select class="form-control country" id="countryCode" style="height:60px">
+                                    <option value="">Select Country</option>
+                                    <option value="USD">United States</option>
+                                    <option value="AFN">Afghanistan</option>
+                                    <option value="EUR">Åland Islands</option>
+                                    <option value="ALL">Albania</option>
+                                    <!-- <option value="DZD">Algeria</option> -->
+                                    <option value="USD">American Samoa</option>
+                                    <option value="EUR">Andorra</option>
+                                    <option value="AOA">Angola</option>
+                                    <option value="XCD">Anguilla</option>
+                                    <option value="XCD">Antigua and Barbuda</option>
+                                    <option value="ARS">Argentina</option>
+                                    <option value="AMD">Armenia</option>
+                                    <option value="AWG">Aruba</option>
+                                    <option value="AUD">Australia</option>
+                                    <option value="EUR">Austria</option>
+                                    <option value="AZN">Azerbaijan</option>
+                                    <option value="BSD">Bahamas</option>
+                                    <option value="BHD">Bahrain</option>
+                                    <option value="BDT">Bangladesh</option>
+                                    <option value="BBD">Barbados</option>
+                                    <option value="BYN">Belarus</option>
+                                    <option value="EUR">Belgium</option>
+                                    <option value="BZD">Belize</option>
+                                    <option value="XOF">Benin</option>
+                                    <option value="BMD">Bermuda</option>
+                                    <option value="BTN">Bhutan</option>
+                                    <option value="BOB">Bolivia</option>
+                                    <option value="USD">Bonaire, Sint Eustatius and Saba</option>
+                                    <option value="BAM">Bosnia and Herzegovina</option>
+                                    <option value="BWP">Botswana</option>
+                                    <option value="BRL">Brazil</option>
+                                    <option value="USD">British Indian Ocean Territory</option>
+                                    <option value="BND">Brunei Darussalam</option>
+                                    <option value="BGN">Bulgaria</option>
+                                    <option value="XOF">Burkina Faso</option>
+                                    <option value="BIF">Burundi</option>
+                                    <option value="KHR">Cambodia</option>
+                                    <option value="XAF">Cameroon</option>
+                                    <option value="CAD">Canada</option>
+                                    <option value="CVE">Cape Verde</option>
+                                    <option value="KYD">Cayman Islands</option>
+                                    <option value="XAF">Central African Republic</option>
+                                    <option value="XAF">Chad</option>
+                                    <option value="CLP">Chile</option>
+                                    <option value="CNY">China</option>
+                                    <option value="AUD">Christmas Island</option>
+                                    <option value="AUD">Cocos (Keeling) Islands</option>
+                                    <option value="COP">Colombia</option>
+                                    <option value="KMF">Comoros</option>
+                                    <option value="XAF">Congo</option>
+                                    <option value="CDF">Congo, the Democratic Republic of the</option>
+                                    <option value="CRC">Costa Rica</option>
+                                    <option value="XOF">Côte d'Ivoire</option>
+                                    <option value="HRK">Croatia</option>
+                                    <option value="CUP">Cuba</option>
+                                    <option value="CW">Curaçao</option>
+                                    <option value="EUR">Cyprus</option>
+                                    <option value="CZK">Czech Republic</option>
+                                    <option value="DKK">Denmark</option>
+                                    <option value="DJF">Djibouti</option>
+                                    <option value="XCD">Dominica</option>
+                                    <option value="DOP">Dominican Republic</option>
+                                    <option value="USD">Ecuador</option>
+                                    <option value="EGP">Egypt</option>
+                                    <option value="USD">El Salvador</option>
+                                    <option value="XAF">Equatorial Guinea</option>
+                                    <option value="ERN">Eritrea</option>
+                                    <option value="EUR">Estonia</option>
+                                    <option value="ETB">Ethiopia</option>
+                                    <option value="FKP">Falkland Islands (Malvinas)</option>
+                                    <option value="FJD">Fiji</option>
+                                    <option value="EUR">Finland</option>
+                                    <option value="EUR">France</option>
+                                    <option value="EUR">French Guiana</option>
+                                    <option value="XPF">French Polynesia</option>
+                                    <option value="XAF">Gabon</option>
+                                    <option value="GMD">Gambia</option>
+                                    <option value="GEL">Georgia</option>
+                                    <option value="EUR">Germany</option>
+                                    <option value="GHS">Ghana</option>
+                                    <option value="GIP">Gibraltar</option>
+                                    <option value="EUR">Greece</option>
+                                    <option value="DKK">Greenland</option>
+                                    <option value="XCD">Grenada</option>
+                                    <option value="EUR">Guadeloupe</option>
+                                    <option value="USD">Guam</option>
+                                    <option value="GTQ">Guatemala</option>
+                                    <option value="GGP">Guernsey</option>
+                                    <option value="GNF">Guinea</option>
+                                    <option value="XOF">Guinea-Bissau</option>
+                                    <option value="GYD">Guyana</option>
+                                    <option value="HTG">Haiti</option>
+                                    <option value="HNL">Honduras</option>
+                                    <option value="HKD">Hong Kong</option>
+                                    <option value="HUF">Hungary</option>
+                                    <option value="ISK">Iceland</option>
+                                    <option value="INR">India</option>
+                                    <option value="IDR">Indonesia</option>
+                                    <option value="IRR">Iran, Islamic Republic of</option>
+                                    <option value="IQD">Iraq</option>
+                                    <option value="EUR">Ireland</option>
+                                    <option value="IMP">Isle of Man</option>
+                                    <option value="ILS">Israel</option>
+                                    <option value="EUR">Italy</option>
+                                    <option value="JMD">Jamaica</option>
+                                    <option value="JPY">Japan</option>
+                                    <option value="JEP">Jersey</option>
+                                    <option value="JOD">Jordan</option>
+                                    <option value="KZT">Kazakhstan</option>
+                                    <option value="KES">Kenya</option>
+                                    <option value="AUD">Kiribati</option>
+                                    <option value="KPW">Korea, Democratic People's Republic of</option>
+                                    <option value="KRW">Korea, Republic of</option>
+                                    <option value="KWR">Kuwait</option>
+                                    <option value="KGS">Kyrgyzstan</option>
+                                    <option value="LAK">Lao People's Democratic Republic</option>
+                                    <option value="EUR">Latvia</option>
+                                    <option value="LBP">Lebanon</option>
+                                    <option value="LSL">Lesotho</option>
+                                    <option value="LRD">Liberia</option>
+                                    <option value="LYD">Libya</option>
+                                    <option value="CHF">Liechtenstein</option>
+                                    <option value="EUR">Lithuania</option>
+                                    <option value="EUR">Luxembourg</option>
+                                    <option value="MOP">Macao</option>
+                                    <option value="MKD">Macedonia, the former Yugoslav Republic of</option>
+                                    <option value="MGA">Madagascar</option>
+                                    <option value="MWK">Malawi</option>
+                                    <option value="MYR">Malaysia</option>
+                                    <option value="MVR">Maldives</option>
+                                    <option value="XOF">Mali</option>
+                                    <option value="EUR">Malta</option>
+                                    <option value="USD">Marshall Islands</option>
+                                    <option value="EUR">Martinique</option>
+                                    <option value="MRU">Mauritania</option>
+                                    <option value="MUR">Mauritius</option>
+                                    <option value="EUR">Mayotte</option>
+                                    <option value="MXN">Mexico</option>
+                                    <option value="USD">Micronesia, Federated States of</option>
+                                    <option value="MDL">Moldova, Republic of</option>
+                                    <option value="EUR">Monaco</option>
+                                    <option value="MNT">Mongolia</option>
+                                    <option value="EUR">Montenegro</option>
+                                    <option value="XCD">Montserrat</option>
+                                    <option value="MAD">Morocco</option>
+                                    <option value="MZN">Mozambique</option>
+                                    <option value="MMK">Myanmar</option>
+                                    <option value="NAD">Namibia</option>
+                                    <option value="AUD">Nauru</option>
+                                    <option value="NPR">Nepal</option>
+                                    <option value="EUR">Netherlands</option>
+                                    <option value="XPF">New Caledonia</option>
+                                    <option value="NZD">New Zealand</option>
+                                    <option value="NIO">Nicaragua</option>
+                                    <option value="XOF">Niger</option>
+                                    <option value="NGN">Nigeria</option>
+                                    <option value="NZD">Niue</option>
+                                    <option value="AUD">Norfolk Island</option>
+                                    <option value="USD">Northern Mariana Islands</option>
+                                    <option value="NOK">Norway</option>
+                                    <option value="OMR">Oman</option>
+                                    <option value="PKR">Pakistan</option>
+                                    <option value="USD">Palau</option>
+                                    <option value="ILS">Palestinian Territory, Occupied</option>
+                                    <option value="USD">Panama</option>
+                                    <option value="PGK">Papua New Guinea</option>
+                                    <option value="PYG">Paraguay</option>
+                                    <option value="PEN">Peru</option>
+                                    <option value="PHP">Philippines</option>
+                                    <option value="NZD">Pitcairn</option>
+                                    <option value="PLN">Poland</option>
+                                    <option value="EUR">Portugal</option>
+                                    <option value="USD">Puerto Rico</option>
+                                    <option value="QAR">Qatar</option>
+                                    <option value="EUR">Réunion</option>
+                                    <option value="RON">Romania</option>
+                                    <option value="RUB">Russian Federation</option>
+                                    <option value="RWF">Rwanda</option>
+                                    <option value="EUR">Saint Barthélemy</option>
+                                    <option value="SHP">Saint Helena, Ascension and Tristan da Cunha</option>
+                                    <option value="XCD">Saint Kitts and Nevis</option>
+                                    <option value="XCD">Saint Lucia</option>
+                                    <option value="EUR">Saint Martin (French part)</option>
+                                    <option value="EUR">Saint Pierre and Miquelon</option>
+                                    <option value="XCD">Saint Vincent and the Grenadines</option>
+                                    <option value="WST">Samoa</option>
+                                    <option value="EUR">San Marino</option>
+                                    <option value="STN">Sao Tome and Principe</option>
+                                    <option value="SAR">Saudi Arabia</option>
+                                    <option value="XOF">Senegal</option>
+                                    <option value="RSD">Serbia</option>
+                                    <option value="SCR">Seychelles</option>
+                                    <option value="SLL">Sierra Leone</option>
+                                    <option value="SGD">Singapore</option>
+                                    <option value="EUR">Slovakia</option>
+                                    <option value="EUR">Slovenia</option>
+                                    <option value="SBD">Solomon Islands</option>
+                                    <option value="SOS">Somalia</option>
+                                    <option value="ZAR">South Africa</option>
+                                    <option value="GBP">South Georgia and the South Sandwich Islands</option>
+                                    <option value="SSP">South Sudan</option>
+                                    <option value="EUR">Spain</option>
+                                    <option value="LKR">Sri Lanka</option>
+                                    <option value="SDG">Sudan</option>
+                                    <option value="SRD">Suriname</option>
+                                    <option value="NOK">Svalbard and Jan Mayen</option>
+                                    <option value="SEK">Sweden</option>
+                                    <option value="CHF">Switzerland</option>
+                                    <option value="SYP">Syria</option>
+                                    <option value="TWD">Taiwan, Province of China</option>
+                                    <option value="TJS">Tajikistan</option>
+                                    <option value="TZS">Tanzania, United Republic of</option>
+                                    <option value="THB">Thailand</option>
+                                    <option value="USD">Timor-Leste</option>
+                                    <option value="XOF">Togo</option>
+                                    <option value="NZD">Tokelau</option>
+                                    <option value="TOP">Tonga</option>
+                                    <option value="TTD">Trinidad and Tobago</option>
+                                    <option value="TND">Tunisia</option>
+                                    <option value="TRY">Turkey</option>
+                                    <option value="TMT">Turkmenistan</option>
+                                    <option value="USD">Turks and Caicos Islands</option>
+                                    <option value="AUD">Tuvalu</option>
+                                    <option value="UGX">Uganda</option>
+                                    <option value="UAH">Ukraine</option>
+                                    <option value="AED">United Arab Emirates</option>
+                                    <option value="GBP">United Kingdom</option>
+                                    <option value="UYU">Uruguay</option>
+                                    <option value="UZS">Uzbekistan</option>
+                                    <option value="VUV">Vanuatu</option>
+                                    <option value="EUR">Vatican City</option>
+                                    <option value="VES">Venezuela, Bolivarian Republic of</option>
+                                    <option value="VND">Viet Nam</option>
+                                    <option value="USD">Virgin Islands, U.S.</option>
+                                    <option value="XPF">Wallis and Futuna</option>
+                                    <option value="YER">Yemen</option>
+                                    <option value="ZMW">Zambia</option>
+                                    <option value="USD">Zimbabwe</option>
+                            </select>
+                        </div>      
+                    </form>
+                    <div class="row">
+                        <div class="col-md-6">         
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-us"></span><strong> USD<span class="float-right text-white" id="usd">&#36;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-au"></span><strong> AUD<span class="float-right text-white" id="aud">&#36;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-gb"></span><strong> GBP<span class="float-right text-white" id="gbp">&#163;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-sg"></span><strong> SGD<span class="float-right text-white" id="sgd">&#36;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-il"></span><strong> ILS<span class="float-right text-white" id="ils">&#8362;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-jp"></span><strong> JPY<span class="float-right text-white" id="jpy">&#165;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-ro"></span><strong> RON<span class="float-right text-white" id="ron">&#105;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-tr"></span><strong> TRY<span class="float-right text-white" id="try">&#8378;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-hr"></span><strong> HRK<span class="float-right text-white" id="hrk">&#110;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-mx"></span><strong> MXN<span class="float-right text-white" id="mxn">&#36;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-no"></span><strong> NOK<span class="float-right text-white" id="nok">&#107;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-id"></span><strong> IDR<span class="float-right text-white" id="idr">&#82;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-hk"></span><strong> HKD<span class="float-right text-white" id="hkd">&#36;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-za"></span><strong> ZAR<span class="float-right text-white" id="zar">&#82;00.00</span></strong></p>
+                            </div>
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                <p class="mb-0 text-success"><span class="flag-icon flag-icon-is"></span><strong> ISK<span class="float-right text-white" id="isk">&#107;00.00</span></strong></p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-ca"></span><strong> CAD<span class="float-right text-white" id="cad">&#36;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-kr"></span><strong> KRW<span class="float-right text-white" id="krw">&#8361;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-th"></span><strong> THB<span class="float-right text-white" id="thb">&#3647;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-ph"></span><strong> PHP<span class="float-right text-white" id="php">&#8369;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-my"></span><strong> MYR<span class="float-right text-white" id="myr">&#82;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-nz"></span><strong> NZD<span class="float-right text-white" id="nzd">&#36;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-pl"></span><strong> PLN<span class="float-right text-white" id="pln">&#122;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-se"></span><strong> SEK<span class="float-right text-white" id="sek">&#107;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-ru"></span><strong> RUB<span class="float-right text-white" id="rub">&#1088;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-cn"></span><strong> CNY<span class="float-right text-white" id="cny">&#165;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-in"></span><strong> INR<span class="float-right text-white" id="inr">&#8377;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-sh"></span><strong> CHF<span class="float-right text-white" id="chf">&#67;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-bg"></span><strong> BGN<span class="float-right text-white" id="bgn">&#1083;00.00</span></strong></p>
+                                </div>
+                                <div class="alert mb-0 py-2 my-3" style="background-color:#002272">
+                                    <p class="mb-0 text-success"><span class="flag-icon flag-icon-cz"></span><strong> CZK<span class="float-right text-white" id="czk">&#75;00.00</span></strong></p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="text-center text-white mt-3"><p id="fixerioapisource"></p></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
